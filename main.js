@@ -35,20 +35,45 @@ function isEvenOrOdd(L, R)
 
 function ascendArrays(arrOfStr)
 {
-alert(arrOfStr)
+alert(`Your Full array of strings is ${arrOfStr}`)
     const sortedArr = arrOfStr.sort()
-alert(sortedArr)
+alert(`Sorted array: ${sortedArr}`)
 }
 
 function promptQuestion()
 {
   //first question
-    var secondsCount = prompt(' 1) Get number of hours, minutes and seconds from number of seconds.    For example :  If number of seconds provided are 129 , then number of hours will be 0 , minutes 2, seconds 9.    Input :  Number of seconds.    Output : “Hou"rs = ‘number of hours’, minutes = ‘number of minutes’ , seconds = ‘number of seconds’ "');
+    var secondsCount = prompt(`
+     1) Get number of hours, minutes and seconds from number of seconds.    For example :  If number of seconds provided are 129 , then number of hours will be 0 , minutes 2, seconds 9.    
+    Input :
+         Number of seconds.
+    Output :
+     “Hou"rs = ‘number of hours’, minutes = ‘number of minutes’ , seconds = ‘number of seconds’ "'
+     Give Total number of seconds`);
     getHoursMinsSeconds(secondsCount)
 
 //second question
 
-    var firstEL = prompt('What is L')
+    var firstEL = prompt(` 2) You are given  two numbers L and R, you have to find if XOR of all the numbers in range L to R (L,R both inclusive) is odd or even.
+    Input:
+    The first line will contain T, number of testcases.
+    Each testcase contains a single line of input, two integers L,R.
+    
+    Output:
+    For each testcase, in the new line print "Odd" if the XOR in the range is odd, else print "Even".
+    Sample Input:
+      4
+      1 4
+      2 6
+      3 3
+      2 3
+    
+    Sample Output:
+      Even
+      Even
+      Odd
+      Odd
+    What is L`)
     var secondEl = prompt('what is R')
 
     isEvenOrOdd(firstEL, secondEl)
@@ -57,7 +82,21 @@ function promptQuestion()
 
 
     //third question
-    var numOfStrings = prompt('Enter your number of Strings')
+    var numOfStrings = prompt(` 3) You are given with T number of strings. You need to sort the strings according to their first character.
+    Input :
+    4
+    “AXXX”
+    “UVVVV”
+    “PGGGG”
+    “BOOUU”
+    
+    Output :
+    “AXXX”
+    “BOOUU”
+    “PGGGG”
+    “UVVVV”
+
+    Enter your number of Strings`)
     
     var arr = [];
     for (let i = 0; i < numOfStrings; i++) {
